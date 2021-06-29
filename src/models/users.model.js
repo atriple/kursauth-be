@@ -1,5 +1,6 @@
 // See http://docs.sequelizejs.com/en/latest/docs/models-definition/
 // for more of what you can do here.
+const { STRING } = require('sequelize');
 const Sequelize = require('sequelize');
 const DataTypes = Sequelize.DataTypes;
 
@@ -16,7 +17,10 @@ module.exports = function (app) {
       type: DataTypes.STRING,
       allowNull: false
     },
-  
+    name: {
+      type: DataTypes.STRING,
+      allowNull : false,
+    },
   
     googleId: { type: DataTypes.STRING },
   
