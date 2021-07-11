@@ -6,13 +6,12 @@ const { OAuthStrategy } = require('@feathersjs/authentication-oauth');
 
 class GoogleStrategy extends OAuthStrategy {
   async getEntityData(profile) {
+    // Akses Google User data setelah mendapatkan access token dari Google
     const baseData = await super.getEntityData(profile);
-    // this will grab the picture and email address of the Google profile
     console.log(profile);
     return {
       ...baseData,
       email: profile.email,
-      password: "default",
       name: profile.given_name
     };
   }

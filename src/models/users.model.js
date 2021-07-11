@@ -15,7 +15,6 @@ module.exports = function (app) {
     },
     password: {
       type: DataTypes.STRING,
-      allowNull: false
     },
     name: {
       type: DataTypes.STRING,
@@ -23,8 +22,6 @@ module.exports = function (app) {
     },
   
     googleId: { type: DataTypes.STRING },
-  
-    facebookId: { type: DataTypes.STRING },
   
   }, {
     hooks: {
